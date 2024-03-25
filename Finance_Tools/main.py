@@ -11,14 +11,14 @@ from src.investment_analysis import ratio_analysis
 ALPHAVANTAGE_API_KEY = "demo"
 BASE_API_URL = "https://www.alphavantage.co/query"
 
-# # Input the portfolio amount
-# try:
-#     portfolio_amount = float(input("Enter the amount you want to invest in the portfolio: "))
-# except ValueError:
-#     print("Please enter a valid number.")
-#     portfolio_amount = float(input("Enter the amount you want to invest in the portfolio: "))
-# print(f"Portfolio amount: {portfolio_amount}")
-portfolio_amount = 1000
+# Input the portfolio amount
+try:
+    portfolio_amount = float(input("Enter the amount you want to invest in the portfolio: "))
+except ValueError:
+    print("Please enter a valid number.")
+    portfolio_amount = float(input("Enter the amount you want to invest in the portfolio: "))
+print(f"Portfolio amount: {portfolio_amount}")
+# portfolio_amount = 1000
 
 # Fetching all the stock tickers
 stock_tickers = utils.get_stock_tickers("data\\raw_data\stocks.csv")

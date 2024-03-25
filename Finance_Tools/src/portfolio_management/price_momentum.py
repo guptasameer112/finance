@@ -1,5 +1,4 @@
 # Standard Imports
-import xlsxwriter
 import pandas as pd
 from scipy import stats
 from statistics import mean
@@ -193,3 +192,5 @@ def save_recommended_trades(Dataframe):
         writer.sheets['price_momentum'].write(f'{column}1', format[0], format[1])
 
     writer.save()
+
+    return None
